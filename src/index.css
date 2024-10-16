@@ -17,6 +17,10 @@ body {
     margin: 50px auto;
 }
 
+header {
+    position: relative;
+}
+
 header .logo {
     font-weight: 600;
     font-size: 20px;
@@ -36,6 +40,30 @@ header ul.nav li {
 
 header ul.nav li:hover {
     opacity: 0.35;
+}
+
+header .shop-cart-button {
+    float: right;
+    cursor: pointer;
+    transition: color, transform 500ms ease;
+}
+
+header .shop-cart-button:hover,
+header .shop-cart-button.active {
+    color: #dc3d3d;
+    transform: scale(1.5);
+}
+
+header .shop-cart {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    min-height: 100px;
+    background: #f7f1f1;
+    -webkit-box-shadow: 13px -9px 38px -13px #616161; 
+    box-shadow: 13px -9px 38px -13px #616161;
+    z-index: 1000;
 }
 
 header .presentation {
@@ -84,6 +112,8 @@ main .item {
     margin-bottom: 50px;
     background: #f7f1f1;
     overflow: hidden;
+    position: relative;
+    padding-bottom: 20px;
 }
 
 main .item img {
@@ -102,7 +132,28 @@ main h2, main p, main b {
 }
 
 main b {
-    color: #148c12;
+    color: #09a406;
+}
+
+main .add-to-cart {
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    background: #087507;
+    width: 35px;
+    height: 35px;
+    text-align: center;
+    line-height: 35px;
+    font-size: 16pt;
+    color: #fff;
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 500ms ease;
+}
+
+main .add-to-cart:hover {
+    transform: scale(1.5) translateY(-5px); 
 }
 
 footer {
