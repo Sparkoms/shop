@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import { GiShoppingCart } from "react-icons/gi";
+import Order from './Order'
 
-export default function Header() {
+export default function Header(props) {
   let [cartOpen, setCartOpen] = useState(false);
   return (
     <header>
@@ -15,7 +16,9 @@ export default function Header() {
             <GiShoppingCart onClick={() => setCartOpen(!cartOpen)} className={`shop-cart-button ${cartOpen && 'active'}`} />
             {cartOpen && (
               <div className='shop-cart'>
-                
+                {props.orders.map(element => (
+                  <Order key={element.id} item={element} />
+                ))}
               </div>
             )}
         </div>

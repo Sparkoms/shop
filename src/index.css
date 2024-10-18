@@ -66,6 +66,16 @@ header .shop-cart {
     z-index: 1000;
 }
 
+header .shop-cart .item {
+    width: 100%;
+}
+
+header .shop-cart .item img {
+    width: 70px;
+    float: left;
+    margin-right: 20px;
+}
+
 header .presentation {
     margin: 50px 0;
     background: url('./img/bg.jpeg') no-repeat;
